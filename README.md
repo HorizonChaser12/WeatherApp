@@ -1,17 +1,65 @@
-# Weather_App
+# Weather App
 
-A minimal weather app which uses a no. of dependencies to show the current weather statics with a clean animated icon for the weather.
-Uses dependencies like **Geolocator** , **Lottie Icons** and **[Weather API](https://openweathermap.org)** for fetching data of User's current weather conditions.
+A minimal weather app that provides current weather statistics with a clean animated icon based on the user's location. The app utilizes Geolocator for location services, Lottie Icons for animated weather icons, and the [OpenWeatherMap API](https://openweathermap.org) for fetching real-time weather data.
+
+## Features
+
+- **Current Weather:** Get real-time weather conditions based on the user's current location.
+- **Animated Icons:** Enjoy clean and visually appealing animated icons representing different weather conditions.
+
+P.S: I will update this app in future with more stuffs such that it stands out from being basic to at least a better version.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Follow these steps to set up the weather app on your local machine.
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [Geolocator](https://pub.dev/packages/geolocator): A Flutter geolocation plugin.
+- [Lottie](https://pub.dev/packages/lottie): A Flutter package for rendering Lottie animations.
+- [OpenWeatherMap API Key](https://openweathermap.org/appid): Sign up and obtain an API key.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/weather-app.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd weather-app
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   flutter pub get
+   ```
+
+4. Create a `.env` file in the project root and add your OpenWeatherMap API key:
+
+   ```env
+   API_KEY=your_openweathermap_api_key
+   ```
+
+5. Run the app:
+
+   ```bash
+   flutter run
+   ```
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or pull requests for any improvements or bug fixes.
+Made with the help of the amazing tutorial on [YouTube](https://www.youtube.com/watch?v=yLtpMqvMgdY&list=PLlvRDpXh1Se6FF_srf1fcahvQX3qFk86v&index=12) by [Mitch Koko](https://github.com/mitchkoko/)
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Feel free to customize the README further based on your project's specifics. Include screenshots, GIFs, or any additional information that you think would enhance the understanding and appeal of your weather app.
