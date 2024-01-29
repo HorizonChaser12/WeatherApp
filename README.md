@@ -1,7 +1,7 @@
 # Weather_App
 
 A minimal weather app which uses a no. of dependencies to show the current weather statics with a clean animated icon for the weather.
-Uses dependencies like **Geolocator** , **Lottie Icons** and [(weather.map.org)] API for fetching data of User's current weather conditions.
+Uses dependencies like **Geolocator** , **Lottie Icons** and **[Weather API](weather.map.org)** for fetching data of User's current weather conditions.
 
 ## Getting Started
 
