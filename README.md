@@ -60,6 +60,3 @@ Made with the help of the amazing tutorial on [YouTube](https://www.youtube.com/
 
 This project is licensed under the [MIT License](LICENSE).
 
----
-
-Feel free to customize the README further based on your project's specifics. Include screenshots, GIFs, or any additional information that you think would enhance the understanding and appeal of your weather app.
