@@ -62,8 +62,8 @@ Follow these steps to set up the weather app on your local machine.
 
 Contributions are welcome! Feel free to open issues or pull requests for any improvements or bug fixes.
 
-This project was created with the assistance of the fantastic tutorial on  [YouTube](https://www.youtube.com/watch?v=yLtpMqvMgdY&list=PLlvRDpXh1Se6FF_srf1fcahvQX3qFk86v&index=12) by [Mitch Koko](https://github.com/mitchkoko/).
-
+This project was created with the assistance of the fantastic tutorial on  [YouTube](https://www.youtube.com/watch?v=yLtpMqvMgdY&list=PLlvRDpXh1Se6FF_srf1fcahvQX3qFk86v&index=12) by [Mitch Koko](https://github.com/mitchkoko/) and [Youtube](https://www.youtube.com/watch?v=MMq4wkeHkPc) by [Romain Girou](https://github.com/romain-girou)
+Icons are sourced from [LottieFiles](https://lottiefiles.com/vdr0uy2wwsoljqtc) by JoChang.
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
