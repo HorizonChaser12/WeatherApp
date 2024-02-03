@@ -25,6 +25,7 @@ Follow these steps to set up the weather app on your local machine.
 - [Geolocator](https://pub.dev/packages/geolocator): A Flutter geolocation plugin.
 - [Lottie](https://pub.dev/packages/lottie): A Flutter package for rendering Lottie animations.
 - [OpenWeatherMap API Key](https://openweathermap.org/appid): Sign up and obtain an API key.
+- [Google Fonts](https://fonts.google.com/specimen/Montserrat): Add them in pubsec.yaml to use in the app. 
 
 ### Installation
 
