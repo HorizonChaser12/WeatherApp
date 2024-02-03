@@ -4,10 +4,17 @@ A minimal weather app that provides current weather statistics with a clean anim
 
 ## Features
 
+Update-1:
+-**Updated UI:** Made the whole UI from looking minimal to a little more eye catching.
+- **Animated Icons:** Added more icons for night and day time in different Weather Conditions.
+- **Time and Date:** Remade the logic for fetching time so that it can use the API rather than the current time.
+- **A little addition:** Added a weather related quote to enhance the user experience which gets changed as per the weather.
+- **Fixed the heading:** Synchoronized the Heading title to match the concurrent timing of the location.
+- **Refresh Functionality:** Added a pull-to-refresh to sync the API fetch whenever triggered.
+
+Origin:
 - **Current Weather:** Get real-time weather conditions based on the user's current location.
 - **Animated Icons:** Enjoy clean and visually appealing animated icons representing different weather conditions.
-
-P.S: I will update this app in future with more stuffs such that it stands out from being basic to at least a better version.
 
 ## Getting Started
 
