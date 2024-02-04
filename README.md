@@ -2,7 +2,7 @@
 
 A minimal weather app that provides current weather statistics with a clean animated icon based on the user's location. The app utilizes Geolocator for location services, Lottie Icons for animated weather icons, and the [OpenWeatherMap API](https://openweathermap.org) for fetching real-time weather data.
 
-##Visual Representation of the App
+## Visual Representation of the App
 
 <div>
    <p align=center>
