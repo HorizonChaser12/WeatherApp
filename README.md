@@ -6,7 +6,7 @@ A minimal weather app that provides current weather statistics with a clean anim
 
 <div>
    <p align=center>
-   <img src="https://github.com/HorizonChaser12/WeatherApp/assets/78254378/3ab28f7e-99ce-4575-80aa-1f12ca043ba8"width="400px" height="700px">
+   <img src="https://github.com/HorizonChaser12/WeatherApp/assets/78254378/3ab28f7e-99ce-4575-80aa-1f12ca043ba8"width="400px" height="800px">
    </p>
 </div>
 
