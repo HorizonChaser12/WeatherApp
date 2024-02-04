@@ -13,7 +13,7 @@ A minimal weather app that provides current weather statistics with a clean anim
 ## Features
 
 Update-1:
--**Updated UI:** Made the whole UI from looking minimal to a little more eye catching.
+- **Updated UI:** Made the whole UI from looking minimal to a little more eye catching.
 - **Animated Icons:** Added more icons for night and day time in different Weather Conditions.
 - **Time and Date:** Remade the logic for fetching time so that it can use the API rather than the current time.
 - **A little addition:** Added a weather related quote to enhance the user experience which gets changed as per the weather.
