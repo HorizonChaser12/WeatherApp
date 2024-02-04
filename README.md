@@ -73,8 +73,3 @@ Contributions are welcome! Feel free to open issues or pull requests for any imp
 
 This project was created with the assistance of the fantastic tutorial on  [YouTube](https://www.youtube.com/watch?v=yLtpMqvMgdY&list=PLlvRDpXh1Se6FF_srf1fcahvQX3qFk86v&index=12) by [Mitch Koko](https://github.com/mitchkoko/) and another [Youtube](https://www.youtube.com/watch?v=MMq4wkeHkPc) video by [Romain Girou](https://github.com/romain-girou).
 Icons are sourced from [LottieFiles](https://lottiefiles.com/vdr0uy2wwsoljqtc) by JoChang.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
