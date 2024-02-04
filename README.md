@@ -2,6 +2,14 @@
 
 A minimal weather app that provides current weather statistics with a clean animated icon based on the user's location. The app utilizes Geolocator for location services, Lottie Icons for animated weather icons, and the [OpenWeatherMap API](https://openweathermap.org) for fetching real-time weather data.
 
+## Visual Representation of the App
+
+<div>
+   <p align=center>
+   <img src="https://github.com/HorizonChaser12/WeatherApp/assets/78254378/3ab28f7e-99ce-4575-80aa-1f12ca043ba8"width="400px" height="800px">
+   </p>
+</div>
+
 ## Features
 
 Update-1:
