@@ -4,7 +4,7 @@ A minimal weather app that provides current weather statistics with a clean anim
 
 ##Visual Representation of the App
 <div align=center>
-   ![Screenshot_1707046614](https://github.com/HorizonChaser12/WeatherApp/assets/78254378/3a7a4f48-d4b6-490c-bd7f-1524690b5339)
+   <imgsrc="https://github.com/HorizonChaser12/WeatherApp/assets/78254378/3a7a4f48-d4b6-490c-bd7f-1524690b5339">
 </div>
 
 ## Features
