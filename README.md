@@ -18,7 +18,7 @@ Update-1:
 - **Time and Date:** Remade the logic for fetching time so that it can use the API rather than the current time.
 - **A little addition:** Added a weather related quote to enhance the user experience which gets changed as per the weather.
 - **Fixed the heading:** Synchoronized the Heading title to match the concurrent timing of the location.
-- **Refresh Functionality:** Added a pull-to-refresh to sync the API fetch whenever triggered.
+- **Refresh Functionality:** Added a pull-to-refresh functionality to sync the API fetch whenever triggered without realoding it with the hot reload functionality given by Flutter.
 
 Origin:
 - **Current Weather:** Get real-time weather conditions based on the user's current location.
