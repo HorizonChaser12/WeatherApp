@@ -1,5 +1,5 @@
+import 'dart:async';
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:weather_app/services/weather_service.dart';
@@ -56,35 +56,26 @@ class _WeatherPageState extends State<WeatherPage> {
       case == 800:
         return '"Whenever you want to see me, always look at the sunset; I will be there."';
       case > 800 && <= 804:
-        return '"There\'s no such thing as bad weather,just soft peopele"';
+        return '"There\'s no such thing as bad weather,just soft people"';
       default:
         return '"Think I\'d rather be asleep right now \n Dream about some mistake I made"';
     }
   }
 
-  String welcomeText = "";
-  void getWelcomeNote() {
-    try {
-      if (DateTime.now().hour < 12) {
-        setState(() {
-          welcomeText = "Good Morning!";
-        });
-      } else if (DateTime.now().hour >= 12 && DateTime.now().hour < 18) {
-        setState(() {
-          welcomeText = "Good Afternoon!";
-        });
-      } else if (DateTime.now().hour >= 18 && DateTime.now().hour <= 22) {
-        setState(() {
-          welcomeText = "Good Evening!";
-        });
-      } else {
-        setState(() {
-          welcomeText = "Have a Good Night!";
-        });
-      }
-    } catch (e) {
-      // ignore: avoid_print
-      print(e);
+  String getWelcomeNote(Weather? weather) {
+    if (weather == null) {
+      return 'Loading..';
+    }
+    if (weather.time.hour.toInt() >= 5 && weather.time.hour.toInt() < 12) {
+      return 'Good Morning!';
+    } else if (weather.time.hour.toInt() >= 12 &&
+        weather.time.hour.toInt() < 18) {
+      return "Good Afternoon!";
+    } else if (weather.time.hour.toInt() >= 18 &&
+        weather.time.hour.toInt() <= 22) {
+      return "Good Evening!";
+    } else {
+      return 'Have a Good Night!';
     }
   }
 
@@ -95,37 +86,37 @@ class _WeatherPageState extends State<WeatherPage> {
     }
     switch (id) {
       case > 200 && <= 300:
-        if ((DateTime.now().hour <= 18)) {
+        if (_weather!.time.hour.toInt() <= 18) {
           return 'assets/thunderrainy.json';
         } else {
           return 'assets/thunderrainynight.json';
         }
       case >= 300 && < 400:
-        if ((DateTime.now().hour <= 18)) {
+        if ((_weather!.time.hour.toInt() <= 18)) {
           return 'assets/drizzle.json';
         } else {
           return 'assets/drizzlenight.json';
         }
       case >= 500 && < 600:
-        if ((DateTime.now().hour <= 18)) {
+        if ((_weather!.time.hour.toInt() <= 18)) {
           return 'assets/rainy.json';
         } else {
           return 'assets/rainynight.json';
         }
       case >= 600 && < 700:
-        if ((DateTime.now().hour <= 18)) {
+        if ((_weather!.time.hour.toInt() <= 18)) {
           return 'assets/snowy.json';
         } else {
           return 'assets/snowynight.json';
         }
       case >= 700 && < 800:
-        if ((DateTime.now().hour <= 18)) {
+        if ((_weather!.time.hour.toInt() <= 18)) {
           return 'assets/mist.json';
         } else {
           return 'assets/mistnight.json';
         }
       case == 800:
-        if ((DateTime.now().hour <= 18)) {
+        if ((_weather!.time.hour.toInt() <= 18)) {
           return 'assets/sunny.json';
         } else {
           return 'assets/night.json';
@@ -133,7 +124,7 @@ class _WeatherPageState extends State<WeatherPage> {
       case > 800 && <= 804:
         return 'assets/cloudy.json';
       default:
-        if ((DateTime.now().hour <= 18)) {
+        if ((_weather!.time.hour.toInt() <= 18)) {
           return 'assets/sunny.json';
         } else {
           return 'assets/night.json';
@@ -144,7 +135,7 @@ class _WeatherPageState extends State<WeatherPage> {
   String date = DateFormat('EEEE d •  hh:mm a').format(DateTime.now());
   Future<void> _refresh() async {
     await _fetchWeather();
-    getWelcomeNote();
+    getWelcomeNote(_weather);
     getWeatherAnimation(_weather?.id);
     date;
   }
@@ -154,7 +145,8 @@ class _WeatherPageState extends State<WeatherPage> {
     super.initState();
     // fetch weather on startup
     _fetchWeather();
-    getWelcomeNote();
+    getWelcomeNote(_weather);
+    date;
   }
 
   @override
@@ -162,14 +154,14 @@ class _WeatherPageState extends State<WeatherPage> {
     return Scaffold(
       backgroundColor: Colors.black,
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(40, 1.2 * kToolbarHeight, 40, 20),
+        padding: const EdgeInsets.fromLTRB(40, 1.20 * kToolbarHeight, 40, 20),
         child: SizedBox(
           height: MediaQuery.of(context).size.height,
           child: Stack(
             children: [
               // Background Circles and Box
               Align(
-                alignment: const AlignmentDirectional(6, -0.80),
+                alignment: const AlignmentDirectional(3, -0.2),
                 child: Container(
                   height: 300,
                   width: 300,
@@ -180,7 +172,7 @@ class _WeatherPageState extends State<WeatherPage> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(-6, -0.80),
+                alignment: const AlignmentDirectional(-3, -0.2),
                 child: Container(
                   height: 300,
                   width: 300,
@@ -193,7 +185,7 @@ class _WeatherPageState extends State<WeatherPage> {
               Align(
                 alignment: const AlignmentDirectional(0, -1.2),
                 child: Container(
-                  height: 300,
+                  height: 400,
                   width: 600,
                   decoration: const BoxDecoration(
                     shape: BoxShape.rectangle,
@@ -218,7 +210,6 @@ class _WeatherPageState extends State<WeatherPage> {
                     children: [
                       // Content
                       Stack(
-                        fit: StackFit.passthrough,
                         children: [
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -232,7 +223,7 @@ class _WeatherPageState extends State<WeatherPage> {
                               ),
                               const SizedBox(height: 8),
                               Text(
-                                welcomeText,
+                                getWelcomeNote(_weather),
                                 style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 30,
@@ -259,6 +250,16 @@ class _WeatherPageState extends State<WeatherPage> {
                               ),
                               Center(
                                 child: Text(
+                                  'feels like ${_weather?.feelslike.round()}°C',
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w300,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
                                   (_weather?.mainCondition ?? "").toUpperCase(),
                                   style: const TextStyle(
                                     color: Colors.white,
@@ -270,7 +271,7 @@ class _WeatherPageState extends State<WeatherPage> {
                               const SizedBox(height: 5),
                               Center(
                                 child: Text(
-                                  DateFormat('EEEE d •  hh:mm a').format(
+                                  DateFormat('EEEE d MMM •  hh:mm a').format(
                                     _weather?.time ?? DateTime.now(),
                                   ),
                                   style: const TextStyle(
